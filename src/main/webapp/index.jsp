@@ -4,9 +4,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>鑫欣汇</title>
+<script src="<%=request.getContextPath() %>/static/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
-	<p>nihaoma</p>
+	<h2>页面加载中</h2>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			window.location.href = "<%= request.getContextPath()%>/index";
+		});
+	</script>
 </body>
 </html>
