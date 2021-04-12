@@ -118,7 +118,7 @@
                <ul class="gg-list">
 	               <c:forEach items="${notices}" var="notice">
 	               <li class="gg-list-li">
-	               		<a href="#">${notice.content}</a>
+	               		<a href="#">${notice.title}</a>
                      	<span class="gg-time">${notice.modified_time }</span>
 	               </li>
 	               </c:forEach>
@@ -221,21 +221,21 @@
                   <form>
                      <div class="row">
                         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
-                           <input class="form-control" placeholder="称呼" type="Name">
+                           <input id="index_name" class="form-control" placeholder="称呼" type="Name">
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
-                           <input class="form-control" placeholder="联系方式" type="Phone Number">
+                           <input id="index_phone" class="form-control" placeholder="联系方式" type="Phone Number">
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
-                           <input class="form-control" placeholder="电子邮件" type="Email">
+                           <input id="index_email" class="form-control" placeholder="电子邮件" type="Email">
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
-                           <textarea class="textarea" placeholder="信息">您的需求在这里提!</textarea>
+                           <textarea id="index_content" class="textarea" placeholder="信息">您的需求在这里提!</textarea>
                         </div>
                      </div>
                   </form>
                </div>
-               <button class="send-btn">开启合作!</button>
+               <button class="send-btn" onclick="openCoops()">开启合作!</button>
             </div>
          </div>
       </div>
@@ -257,8 +257,8 @@
                      <div class="Follow">
                         <h3></h3>
                      </div>
-                     <input class="Newsletter" placeholder="输入邮件地址订阅我们最新的消息!" type="Enter your email">
-                     <button class="Subscribe">订阅</button>
+                     <input id="index_newsletter" class="Newsletter" placeholder="输入邮件地址订阅我们最新的消息!" type="Enter your email">
+                     <button class="Subscribe" onclick="subscription()">订阅</button>
                   </div>
                </div>
             </div>
@@ -280,8 +280,9 @@
       <!-- sidebar -->
       <script src="static/js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="static/js/custom.js"></script>
+      <script src="static/js/rk.js" type="text/javascript"></script>
 	  <style>
-.copyrights{text-indent:-9999px;height:0;line-height:0;font-size:0;overflow:hidden;}
-</style>
+		.copyrights{text-indent:-9999px;height:0;line-height:0;font-size:0;overflow:hidden;}
+		</style>
    </body>
 </html>

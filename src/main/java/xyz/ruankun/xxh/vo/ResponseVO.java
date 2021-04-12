@@ -4,10 +4,8 @@ public class ResponseVO<T> {
 	
 	private Integer code;
 	private String message;
-	
 	// 结果中携带自定义数据类型
 	private T data;
-	
 	
 	public static ResponseVO<?> success() {
 		ResponseVO<?> r = new ResponseVO<Object>();
