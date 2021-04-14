@@ -14,6 +14,18 @@ public class ResponseVO<T> {
 		return r;
 	}
 	
+	/**
+	 * 静态和泛型不兼容哦
+	 * @param data
+	 * @return 
+	 */
+	public ResponseVO<T> success(T data) {
+		setCode(1);
+		setMessage("success!");
+		setData(data);
+		return this;
+	}
+	
 	public static ResponseVO<?> fail(String msg) {
 		ResponseVO<?> r = new ResponseVO<Object>();
 		r.setCode(-1);

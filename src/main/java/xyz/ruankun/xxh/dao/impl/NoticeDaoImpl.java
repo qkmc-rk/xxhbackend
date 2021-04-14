@@ -3,6 +3,7 @@ package xyz.ruankun.xxh.dao.impl;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,6 +41,7 @@ public class NoticeDaoImpl implements NoticeDao {
 			}
 		};
 		List<Notice> notices = JdbcTemplate.queryForObject(sql, rowMapper);
+		Collections.reverse(notices);
 		return notices;
 	}
 
@@ -49,5 +51,26 @@ public class NoticeDaoImpl implements NoticeDao {
 
 	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
 		JdbcTemplate = jdbcTemplate;
+	}
+
+	@Override
+	public Notice selectOneById(Integer id) {
+		String sql = "select * from notice where id=?";
+		RowMapper<Notice> rowMapper = new RowMapper<Notice>() {
+			@Override
+			public Notice mapRow(ResultSet rs, int rowNum) throws SQLException {
+				Notice notice = new Notice();
+				do {
+					notice = new Notice();
+					notice.setId(rs.getInt(1));
+					notice.setTitle(rs.getString(2));
+					notice.setContent(rs.getString(3));
+					notice.setCreate_time(rs.getDate(4));
+					notice.setModified_time(rs.getDate(5));
+				}while(rs.next());
+				return notice;
+			}
+		};
+		return JdbcTemplate.queryForObject(sql, rowMapper, id);
 	}
 }

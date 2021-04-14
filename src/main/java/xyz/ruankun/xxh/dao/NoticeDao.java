@@ -7,5 +7,7 @@ import xyz.ruankun.xxh.entity.Notice;
 public interface NoticeDao {
 	
 	List<Notice> selectAll();
+	
+	Notice selectOneById(Integer id);
 
 }

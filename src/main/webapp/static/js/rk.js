@@ -1,29 +1,3 @@
-/**
- *  rk 定义的各种方法
- */
-function subscription(){
-	var email = $('#index_newsletter').val();
-	if(email === ''){
-		alert('请输入电子邮件地址!');
-		return;
-    }
-	$.ajax({
-        type: "post",
-        url: "subscription",
-        data: {"email":email},
-        dataType: "json",
-        success: function (response) {
-			if(response.code == 1){
-				alert('订阅成功')
-				$('#index_newsletter').val("")
-			} else {
-				$('#index_newsletter').val("")
-				alert('订阅失败')
-			}
-        }
-    });
-}
-
 function openCoops(){
 	var name = $('#index_name').val();
     var phone = $('#index_phone').val();
@@ -54,4 +28,59 @@ function openCoops(){
 			}
         }
     });
+}
+$(document).ready(function(){
+	$.ajax({
+        type: "get",
+        url: "notices",
+        async:false,
+        success: function (response) {
+        	response = JSON.parse(response);
+			if(response.code === 1){
+				var data = response.data;
+				for(i = 0; i < data.length; i++){
+					data[i].create_time=timestampToDate(data[i].create_time/1000);
+				}
+				loadTable(data);
+				bindClick();
+			}
+        }
+    });
+});
+
+function loadTable(data){
+	// bootstrap table
+	$('#table').bootstrapTable({
+		data:data,
+	    pagination: true,
+	    search: true,
+	    columns: [{
+	      field: 'title',
+	      title: '标题'
+	    }, {
+	      field: 'create_time',
+	      title: '时间'
+	    }]
+	});
+}
+
+function bindClick(){
+	$('#table').on('click-cell.bs.table', function (e,field, value,row,$element) {
+	   console.log(row.id);
+	   window.location.href='notice/' + row.id;
+	});
+}
+
+
+
+// 时间戳转换工具
+function timestampToDate(timestamp) {
+    var date = new Date(timestamp * 1000);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
+    Y = date.getFullYear() + '-';
+    M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
+    D = date.getDate() + ' ';
+    //h = date.getHours() + ':';
+    //m = date.getMinutes() + ':';
+    //s = date.getSeconds();
+    return Y+M+D//+h+m+s;
 }

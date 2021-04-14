@@ -113,13 +113,13 @@
             <!-- 公告公示 -->
             <div class="col-lg-8 col-md-8 col-xs-12 col-xl-8 offset-lg-2 offset-md-2 offset-xl-2">
                <div class="gg-title">
-                  <a href="#" class="a-title">公告公示 <i style="font-size: 16px; font-weight: 100;">  更多</i></a>
+                  <a href="notice" class="a-title">公告公示 <i style="font-size: 16px; font-weight: 100;">  更多</i></a>
                </div>
                <ul class="gg-list">
 	               <c:forEach items="${notices}" var="notice">
 	               <li class="gg-list-li">
-	               		<a href="#">${notice.title}</a>
-                     	<span class="gg-time">${notice.modified_time }</span>
+	               		<a href="${request.contextPath() }/xxh/notice/${notice.id}">${notice.title}</a>
+                     	<span class="gg-time">${notice.modified_time}</span>
 	               </li>
 	               </c:forEach>
                </ul>
@@ -170,7 +170,7 @@
                      <h2>品牌 <strong class="black">展示 </strong></h2>
                      <span>特色烤鱼饭, 在云贵川渝已开30多家店铺, 完整的运营体系和vi识别度<br></span> 
                      <span>大碗米线, 新新品牌, 市场已经开三家联营合作店铺, 营业额逐步稳健提升<br></span> 
-                     <span>大碗米线, 新新品牌, 市场已经开三家联营合作店铺, 营业额逐步稳健提升<br></span> 
+                     <span>张老头剁椒拌饭源于辣椒百家荟萃之地一-成都， 只做正宗的剁椒。张老头剁椒调和了成都的热辣性格与辣椒的绵软柔情，汇聚成一个拥有的侠骨柔情的品牌，遇见不可不一尝。<br></span> 
                   </div>
                </div>
             </div>
@@ -187,7 +187,7 @@
                </div>
                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
                   <div class="book-box">
-                     <figure><img src="static/images/vi3.png" alt="img"/></figure>
+                     <figure><img src="static/images/vi3.jpg" alt="img"/></figure>
                   </div>
                </div>
                <!-- <div class="col-md-6 offset-md-3">
@@ -281,6 +281,7 @@
       <script src="static/js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="static/js/custom.js"></script>
       <script src="static/js/rk.js" type="text/javascript"></script>
+      <script src="static/js/subscription.js"></script>
 	  <style>
 		.copyrights{text-indent:-9999px;height:0;line-height:0;font-size:0;overflow:hidden;}
 		</style>

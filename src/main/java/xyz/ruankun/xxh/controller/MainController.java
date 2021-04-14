@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -58,6 +59,22 @@ public class MainController {
 		ModelAndView mdv = new ModelAndView();
 		//需要在这里拿到主页需要的数据,那就是嘿嘿,新闻列表
 		mdv.setViewName("brand_show");
+		return mdv;
+	}
+	@RequestMapping("/notice")
+	public ModelAndView notice() {
+		ModelAndView mdv = new ModelAndView();
+		//需要在这里拿到主页需要的数据,那就是嘿嘿,新闻列表
+		mdv.setViewName("noticelist");
+		return mdv;
+	}
+	@RequestMapping("/notice/{id}")
+	public ModelAndView noticeDetail(@PathVariable("id") Integer id) {
+		ModelAndView mdv = new ModelAndView();
+		//需要在这里拿到主页需要的数据,那就是嘿嘿,新闻列表
+		mdv.setViewName("notice");
+		Notice notice = noticeService.getById(id);
+		mdv.addObject("notice", notice);
 		return mdv;
 	}
 }

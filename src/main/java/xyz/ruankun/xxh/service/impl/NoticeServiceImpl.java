@@ -21,4 +21,10 @@ public class NoticeServiceImpl implements NoticeService {
 		return notices;
 	}
 
+	@Override
+	public Notice getById(Integer id) {
+		Notice notice = noticeDao.selectOneById(id);
+		return notice;
+	}
+
 }

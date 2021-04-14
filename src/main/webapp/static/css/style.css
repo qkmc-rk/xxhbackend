@@ -972,6 +972,7 @@ ul.top_icon li a{ color: #fff;
  .main-menu ul>li:nth-child (6) {
      padding-right: 0px;
 }
+
  .nav>li {
      position: inherit;
      display: inline-block;
@@ -1484,11 +1485,16 @@ ul.locat_icon li a{
 }
  .about .about-box p {
     font-size: 17px;
-    line-height: 24px;
+    line-height: 40px;
     color: #141012;
     text-indent: 2em;
      
 }
+
+.about-box-bottom p {
+	line-height:30px;
+}
+
  .about .about-box a{
      width: 200px;
      font-size: 17px;

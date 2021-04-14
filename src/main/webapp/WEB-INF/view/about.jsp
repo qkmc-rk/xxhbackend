@@ -177,24 +177,24 @@
 
             <div class="row border">
                <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
-                  <div class="">
+                  <div class="about-box-bottom">
                      <h2 style="font-weight: 800; color:black;">开业项目:</h2>
                      <p class="kaiye" style="color: red;font-size: 20px; font-weight: 800;">部分开业项目</p>
                      <p class="dsfjkl">云南农业大学稻香园餐厅二楼</p>
-                        <p class="dsfjkl">四川农业大学（成都校区）</p>
-                        <p class="dsfjkl">成都大学五食堂二楼</p>
-                        <p class="dsfjkl">吉利学院一食堂二楼</p>
-                        <p class="dsfjkl">西华大学（宜宾校区）</p>
-                        <p class="dsfjkl">遵义医科大学（新浦校区）</p>
-                        <p class="dsfjkl">四川大学锦城学院</p>
-                        <p class="dsfjkl">雅安职业技术学院（经开校区）</p>
-                        <p class="dsfjkl">云南工程技术学院</p>
-                        <p class="dsfjkl">电子科技大学成都学院</p>
-                        <p class="dsfjkl">电子科技大学沙河校区</p>
-                        <p class="kaiye" style="color: yellow;font-size: 20px; font-weight: 800;">项目布局全国:</p>
-                        <p class="dsfjkl">
-                           云南、四川、贵州、重庆、河北、陕西、广西、山东、湖北等高校
-                        </p>
+                     <p class="dsfjkl">四川农业大学（成都校区）</p>
+                     <p class="dsfjkl">成都大学五食堂二楼</p>
+                     <p class="dsfjkl">吉利学院一食堂二楼</p>
+                     <p class="dsfjkl">西华大学（宜宾校区）</p>
+                     <p class="dsfjkl">遵义医科大学（新浦校区）</p>
+                     <p class="dsfjkl">四川大学锦城学院</p>
+                     <p class="dsfjkl">雅安职业技术学院（经开校区）</p>
+                     <p class="dsfjkl">云南工程技术学院</p>
+                     <p class="dsfjkl">电子科技大学成都学院</p>
+                     <p class="dsfjkl">电子科技大学沙河校区</p>
+                     <p class="kaiye" style="color: yellow;font-size: 20px; font-weight: 800;">项目布局全国:</p>
+                     <p class="dsfjkl">
+                        云南、四川、贵州、重庆、河北、陕西、广西、山东、湖北等高校
+                     </p>
                   </div>
                </div>
                <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12">
@@ -225,8 +225,8 @@
                      <div class="Follow">
                         <h3></h3>
                      </div>
-                     <input class="Newsletter" placeholder="输入邮件地址订阅我们最新的消息!" type="Enter your email">
-                     <button class="Subscribe">订阅</button>
+                     <input id="index_newsletter" class="Newsletter" placeholder="输入邮件地址订阅我们最新的消息!" type="Enter your email">
+                     <button class="Subscribe" onclick="subscription()">订阅</button>
                   </div>
                </div>
             </div>
@@ -248,5 +248,6 @@
       <!-- sidebar -->
       <script src="static/js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="static/js/custom.js"></script>
+      <script src="static/js/subscription.js"></script>
    </body>
 </html>

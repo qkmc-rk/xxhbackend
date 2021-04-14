@@ -142,8 +142,8 @@
                      <div class="Follow">
                         <h3></h3>
                      </div>
-                     <input class="Newsletter" placeholder="输入邮件地址订阅我们最新的消息!" type="Enter your email">
-                     <button class="Subscribe">订阅</button>
+                     <input id="index_newsletter" class="Newsletter" placeholder="输入邮件地址订阅我们最新的消息!" type="Enter your email">
+                     <button class="Subscribe" onclick="subscription()">订阅</button>
                   </div>
                </div>
             </div>
@@ -165,5 +165,6 @@
       <!-- sidebar -->
       <script src="static/js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="static/js/custom.js"></script>
+      <script src="static/js/subscription.js"></script>
    </body>
 </html>
