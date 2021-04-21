@@ -108,7 +108,7 @@
          </div>
       </section>
       <!-- gmenu -->
-      <div class="container-fluid g_menu">
+      <div class="container-fluid g_menu"> 623
          <div class="row">
             <!-- 公告公示 -->
             <div class="col-lg-8 col-md-8 col-xs-12 col-xl-8 offset-lg-2 offset-md-2 offset-xl-2">

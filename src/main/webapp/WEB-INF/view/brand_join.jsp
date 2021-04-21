@@ -91,24 +91,24 @@
                   <form>
                      <div class="row">
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                           <input style="margin-bottom: 20px;" class="form-control" placeholder="您的称呼" name="name" type="text">
+                           <input style="margin-bottom: 20px;" class="form-control" placeholder="您的称呼" id="name" name="name" type="text">
                         </div>
                          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                           <input style="margin-bottom: 20px;" class="form-control" placeholder="您的电子邮件" name="email" type="Email">
+                           <input style="margin-bottom: 20px;" class="form-control" placeholder="您的电子邮件" id="email" name="email" type="Email">
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                           <input style="margin-bottom: 20px;" class="form-control" placeholder="您的电话号码" name="phone_nu" type="text">
+                           <input style="margin-bottom: 20px;" class="form-control" placeholder="您的电话号码" id="phone" name="phone_nu" type="text">
                         </div>
                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                           <input class="form-control" placeholder="合作项目" name="subject" type="text">
+                           <!-- <input class="form-control" placeholder="合作项目" name="subject" type="text"> -->
                         </div>
                         <div class="col-sm-12">
-                           <textarea class="textarea" name="message" placeholder="商谈项目描述">商谈项目描述</textarea>
+                           <textarea class="textarea" name="message" id="content" placeholder="商谈项目描述">商谈项目描述</textarea>
                         </div>
                      </div>
                   </form>
                </div>
-               <button class="send-btn">开启合作</button>
+               <button class="send-btn" onclick="openCorp()">开启合作</button>
             </div>
          </div>
       </div>
@@ -154,5 +154,6 @@
       <script src="static/js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="static/js/custom.js"></script>
       <script src="static/js/subscription.js"></script>
+      <script src="static/js/brand_join.js"></script>
    </body>
 </html>
